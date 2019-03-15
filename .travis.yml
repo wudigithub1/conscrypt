@@ -129,3 +129,5 @@ script:
 
 after_script:
   - "[ -f android/build/outputs/lint-results-debug.xml ] && cat android/build/outputs/lint-results-debug.xml"
+after_success:
+  - bash <(curl -s https://copilot.blackducksoftware.com/ci/travis/scripts/upload)
